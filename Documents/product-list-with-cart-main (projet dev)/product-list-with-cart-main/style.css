@@ -1,0 +1,299 @@
+body {
+    font-family: 'Red Hat Text', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;                                             /* Body */
+    font-size: var(--font-size-body);
+    background-color: var(--color-rose-50);
+}
+
+
+
+h2{
+    margin: 0;                                            /* Contenue ecriture mais h2 */
+    font-size: 1em;
+}
+
+
+
+
+h3{
+    margin: 5px 2;
+    font-size: 0.8em;                                    /* Contenue ecriture mais h3 */
+    color: var(--color-red);
+}
+
+
+
+h4{
+    font-size: 1.2em;
+    color: var(--color-red);                            /* Contenue ecriture mais h4 */
+}
+
+
+
+.container {
+    padding: 3rem 2rem 2rem 5rem;                                  
+    display: flex;                                      /* ajustement du contenue dans l'ordre precis du schema final du taff */
+}
+
+
+
+
+main{
+    gap: 10px;
+    display: grid;           /* definitions du grid de 3 colonne de 3 case par ligne et ses etroitement entre chaque case  */
+    margin-right: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
+
+.main-section {
+    flex: 2;                                     /* étroitement */
+}
+
+
+
+
+.sidebar {                                      /* deplacement contenue */
+    flex: 1;
+}
+
+
+
+
+.cart{
+    padding: 20px;
+    border-radius: 10px;                                       /* Card en haut a droite (panier) */
+    background-color: hsl(0, 0%, 100%);
+}
+
+
+
+
+.empty-message{
+    font-size: 0.9em;                                      /* message panier */
+    color: var(--color-rose-500);
+}
+
+
+
+
+.empty-content{
+    text-align: center;                               /* ajustement complet de tout le contenue du panier vers le centre */
+}
+
+
+
+
+
+.products-card{
+    margin-top: 2rem;
+    position: relative;
+    width: 100%;                                           /* deplacement du groupe de totalité des case etc.... */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+.products-card p{
+    margin-top: 1.5rem;
+    font-size: 0.9em;                                    /* Contenue ecriture P  (ecriture en beige en bas du boutons) */
+    color: var(--color-rose-500);
+    font-weight: var(--font-weight-medium);
+}
+
+
+
+
+
+
+:root {
+   
+    --color-red: hsl(14, 86%, 42%);
+    --color-green: hsl(159, 69%, 38%);
+    
+    --color-rose-50: hsl(20, 50%, 98%);
+    --color-rose-100: hsl(13, 31%, 94%);
+    --color-rose-300: hsl(14, 25%, 72%);
+    --color-rose-400: hsl(7, 20%, 60%);
+    --color-rose-500: hsl(12, 20%, 44%);             /* parametrage couleur texte , police, normal, semi gras, epaisse  */
+    --color-rose-900: hsl(14, 65%, 9%);
+
+   
+    --font-body: 'Red Hat Text', sans-serif;
+    
+      
+    --font-size-body: 16px;
+
+   
+    --font-weight-normal: 400;
+    --font-weight-medium: 600;
+    --font-weight-bold: 700;
+}
+
+
+
+
+
+
+
+.image-product{
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;                      /* positions et des card et leurs ajustement (grosseur etc...)  */
+    border-radius: 10px;
+    position: relative;
+    border: 1px solid transparent;
+    transition: border 0.3s ease;
+}
+
+
+
+.addToCart{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;                                  /* formations et gestions de mon boutons */
+    padding: 0.5rem 1rem;
+    color: var(--color-rose-900);
+    font-weight: var(--font-weight-bold);
+    background-color: hsl(0, 0%, 100%);
+    border: 2px solid var(--color-rose-300);
+}
+
+
+
+
+
+
+.addToCart:hover{
+    cursor: pointer;                             /* Couleur lors du click de mon curseur de souris  */
+    color: var(--color-red);
+    border-color: var(--color-red);
+}
+
+
+
+
+.addToCart,
+.counter {
+    z-index: 1;
+    margin-top: -25px;
+    display: flex;                     /* contenue de placement (boutons texte etc...)  */
+    justify-content: center;     
+    align-items: center;
+}
+
+
+
+.counter {
+    display: none;
+    justify-content: space-between;      /* ajustement de mon contenue vers le haut (boutons texte etc...)  */
+    align-items: center;
+}
+
+
+h3, h4 {
+    text-align: left;
+    margin-left: 0;                           /* alignement textes */
+    padding-left: 5px; 
+}
+
+
+.products-card {
+    display: flex;
+    flex-direction: column;           /* alignement de mon contenue par cas en collonne est droit  */
+    align-items: center; 
+}
+
+.products-card h3,                                                               
+.products-card h2,                   /* déplacement de mes textes vers la gauche  */
+.products-card p {                     
+    align-self: flex-start;
+    margin-left: 20px; 
+}
+
+
+                                                   /* Police d'écriture  */
+@font-face {
+font-family: 'Red Hat Text';
+src: url('product-list-with-cart-main/assets/fonts/RedHatText-VariableFont_wght.ttf') format('truetype');            
+font-weight: normal;
+font-style: normal;
+}
+
+
+
+
+.confirm-order-btn {
+    display: block;
+    margin: 20px auto;                                                        /* Centre horizontalement */
+    background: linear-gradient(45deg,hsl(14, 86%, 42%),hsl(14, 86%, 42%));
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 80%;                                    /* Ajuste la largeur */
+    max-width: 300px;
+    box-shadow: 0px 4px 10px #ffffff;
+    text-align: center;
+}
+
+.confirm-order-btn:hover {
+    background: linear-gradient(45deg, #FF7000, #FF8C00);
+    transform: scale(1.05);
+}
+
+
+.order-total-container {
+    display: flex;
+    justify-content: space-between;                                /* Sépare les deux éléments */
+    align-items: center;
+    padding: 10px 0;                        /* Ajuste l'espace vertical */
+}
+
+.special-price {
+    display: flex;
+    justify-content: space-between;                        /* Sépare les éléments */
+    align-items: center;
+    width: 100%;                       /* Ajuste l'espace */
+}
+
+.special-price .quantity {
+    margin-right: 20px;                      /* Ajoute de l'espace entre "2×" et "❌" */
+}
+
+
+#special-number {
+    color: gray;                                                   /* Chiffres spécifiques en gris */
+}
+
+.confirm-order-btn-2  {
+    display: block;
+    margin: 20px auto;                                                             /* Centre horizontalement */
+    background: linear-gradient(45deg,hsl(8, 100%, 97%),hsl(14, 76%, 97%));
+    color: rgb(57, 57, 57);
+    font-size: 10x;
+    font-weight: bold;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 80%;                                                                     /* Ajuste la largeur */
+    max-width: 300px;
+    box-shadow: 0px 4px 10px #ffffff;
+    text-align: center;
+}
+
