@@ -1,1 +1,1 @@
-                                                                                          ﻿✅​ Maquette-Dessert-Facette
+                                      ✅​ Maquette-Dessert-Facette
