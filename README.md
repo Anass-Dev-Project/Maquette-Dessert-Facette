@@ -1,2 +1,2 @@
 ﻿# Maquette-Dessert-Facette
-Maquette MAJ
+-Maquette MAJ
